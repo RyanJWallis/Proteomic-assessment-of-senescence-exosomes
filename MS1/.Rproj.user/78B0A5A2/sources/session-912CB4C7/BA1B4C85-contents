@@ -1,0 +1,19 @@
+library("gprofiler2")
+
+# Example gene list (replace with your gene list)
+gene_list <- MS1_Control_Top_50$`T: Gene names`
+
+# Perform GO analysis
+go_results <- gost(query = gene_list, 
+                   organism = "hsapiens", ordered_query = FALSE, 
+                   multi_query = FALSE, significant = TRUE, exclude_iea = FALSE, 
+                   measure_underrepresentation = FALSE, evcodes = FALSE, 
+                   user_threshold = 0.05, correction_method = "fdr", 
+                   domain_scope = "annotated", custom_bg = NULL, 
+                   numeric_ns = "", sources = NULL, as_short_link = FALSE, highlight = TRUE)
+
+# View the GO analysis results
+
+Test <- go_results$result
+Test<- Test %>%
+  filter(source == "GO:CC") 
