@@ -7,6 +7,8 @@ This project was my introduction to bioinformatics. I utilised R/RStudio to anal
 
 **<a href="https://qmro.qmul.ac.uk/xmlui/handle/123456789/71085?show=full">Thesis Link</a>**
 
+Python mirror file contains Jupyter Notebook formatted alternative scripts for Python 
+
 # Project Details 
 
 The project contains all the data that was used to construct the paper figures.
